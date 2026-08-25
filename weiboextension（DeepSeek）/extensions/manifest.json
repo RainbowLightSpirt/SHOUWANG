@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "微博理性发言主动干预插件",
+  "version": "1.0",
+  "description": "在微博发送按钮上悬停时主动检测用户正文，并通过阻断式弹窗提供理性劝导与对话建议",
+  "permissions": [],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.weibo.com/*",
+        "*://weibo.com/*",
+        "*://*.weibo.cn/*",
+        "*://weibo.cn/*",
+        "*://*.sina.com.cn/*",
+        "*://sina.com.cn/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

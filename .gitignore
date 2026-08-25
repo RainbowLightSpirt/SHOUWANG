@@ -1,0 +1,24 @@
+# ---- 环境与密钥 ----
+# 真实 API key 一律不进仓库，只留 .env.example 占位
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# ---- 模型权重（另行开源，不随代码仓库分发）----
+backend/models/
+*.onnx
+*.safetensors
+
+# ---- 内部工具与杂项 ----
+_internal/
+*.log
+.DS_Store
+Thumbs.db
